@@ -40,7 +40,7 @@ class Parser implements ParserInterface
             if ($activeNode && $activeNode->tag->name() === 'script'
                 && $options->isCleanupInput() !== true
             ) {
-                $str = $content->copyUntil('</');
+                $str = $content->copyUntil('</script');
             } else {
                 $str = $content->copyUntil('<');
             }
